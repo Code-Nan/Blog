@@ -1,0 +1,49 @@
+{% extends 'user/base.html' %}
+{% block body %}
+    <div class="page-container">
+
+        <h1>注册</h1>
+
+        <form class="register" action="/user/register/handle" method="post">
+
+            <input type="text" name="username" class="username" placeholder="用户名">
+            <div class="error-tips"><span></span></div>
+
+            <input type="text" name="email" class="email" placeholder="邮箱">
+            <div class="error-tips"><span></span></div>
+
+            <input type="password" name="password" class="password" placeholder="密码">
+            <div class="error-tips"><span></span></div>
+
+            <input type="password" name="confirmPassword" class="confirmPassword" placeholder="确认密码">
+            <div class="error-tips"><span></span></div>
+
+            <button type="submit" class="register">提交注册</button>
+
+            <button type="button" class="login">返回登录</button>
+
+            <div class="error"><span>+</span></div>
+
+
+
+        </form>
+
+        <div class="connect">
+
+            <p>其他方式登录:</p>
+
+            <p>
+
+                <a class="facebook" href=""></a>
+
+                <a class="twitter" href=""></a>
+
+            </p>
+
+        </div>
+
+    </div>
+{% endblock body %}
+{% block js %}
+    <script src="/static/js/register.js"></script>
+{% endblock js %}
