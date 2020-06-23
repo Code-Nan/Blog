@@ -37,7 +37,7 @@ def login_handle(request):
     else:
         context = {
             'title': '用户登录',
-            'user_message': '用户名错误'
+            'user_message': '用户名不存在'
         }
         return render(request, 'user/login.html', context)
 
